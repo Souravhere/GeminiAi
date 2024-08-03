@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-gray-800 text-white w-full h-screen relative">
+      <div className="bg-black text-white w-full h-screen relative">
       <Sidebar />
       </div>
     </>
