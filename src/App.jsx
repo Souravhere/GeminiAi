@@ -1,8 +1,12 @@
+import Sidebar from "./components/Sidebar/Sidebar"
+
 function App() {
 
   return (
     <>
-      <h1>Hello i am sourav</h1>
+      <div className="bg-gray-800 text-white w-full h-screen relative">
+      <Sidebar />
+      </div>
     </>
   )
 }
