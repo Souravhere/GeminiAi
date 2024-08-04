@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaRegUser, FaCode } from "react-icons/fa";
+import { FaRegUser, FaCode, FaRegLightbulb } from "react-icons/fa";
+import { CiLocationOn, CiChat2 } from "react-icons/ci";
 
 const Main = () => {
   return (
@@ -9,25 +10,25 @@ const Main = () => {
         <FaRegUser size={"1.4em"}  />
       </div>
       <div className='mt-20 '>
-        <h1 className='text-3xl font-semibold'>Hello Dev ,</h1>
+        <h1 className='text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-600'>Hello Dev ,</h1>
         <h3 className='text-xl'>How can I help you Today ?</h3>
       </div>
       <div className='w-full flex items-center justify-between mt-6 flex-warp gap-3 sm:overflow-x-hidden overflow-x-scroll'>
         <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
-          <p className='text-xs'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, magni laudantium voluptatum quas saepe mollitia.</p>
+          <p className='text-xs'>Please provide a brief summary on the concept of urban society</p>
+          <FaRegLightbulb size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]'/>
+        </div>
+        <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
+          <p className='text-xs'>How do you implement a binary search algorithm in Python?</p>
           <FaCode size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]'/>
         </div>
         <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
-          <p className='text-xs'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, magni laudantium voluptatum quas saepe mollitia.</p>
-          <FaCode size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]'/>
+          <p className='text-xs'>Suggest beautiful destinations for my upcoming road trip</p>
+          <CiLocationOn size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]'/>
         </div>
         <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
-          <p className='text-xs'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, magni laudantium voluptatum quas saepe mollitia.</p>
-          <FaCode size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]'/>
-        </div>
-        <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
-          <p className='text-xs'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, magni laudantium voluptatum quas saepe mollitia.</p>
-          <FaCode size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]'/>
+          <p className='text-xs'>Describe the benefits of using AI in everyday life.</p>
+          <CiChat2 size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]'/>
         </div>
       </div>
     </div>
