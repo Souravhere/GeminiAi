@@ -9,7 +9,7 @@ const Sidebar = () => {
   const [extended, setextended] = useState(false)
 
   return (
-    <div className='fixed top-0 left-0 bg-slate-800/90 h-screen min-w-16 max-w-fit'>
+    <div className='block top-0 left-0 bg-slate-800/90 h-screen min-w-16 max-w-fit'>
       {/* TOP div */}
       <div>
       <div onClick={()=> setextended(prev => !prev)}>
