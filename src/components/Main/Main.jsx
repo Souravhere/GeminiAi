@@ -10,7 +10,7 @@ const Main = () => {
 
   const handleClick = () => {
     if (input.trim()) {
-      onSent(input);  // Pass the input to onSent
+      onSent(input);
     }
   };
 
