@@ -12,7 +12,9 @@ const ContextProvider = (props) => {
     const [resultData, setresultData] = useState("");
 
     const dealyPara = (index, nextWord) => {
-
+        setTimeout(() => {
+            setresultData(prev=>prev+nextWord);
+        }, 70*index);
     }
 
     const onSent = async (prompt) => {
@@ -22,16 +24,23 @@ const ContextProvider = (props) => {
         setrecentPrompt(input);
         const response = await run(input);
         let responseArray = response.split("**");
-        let  newArray;
+        let  newResponse;
         for (let i = 0; i < responseArray.length; i++) {
             if (i == 0 || i%2 !== 1) {
-                newArray += responseArray[i]
+                newResponse += responseArray[i]
             }
             else{
-                newArray += "<b>" +responseArray[i]+ "</b>";
+                newResponse += "<b>" +responseArray[i]+ "</b>";
             }
         }
-        setresultData(newArray);
+        let newResponse2 = newResponse.split("*").join("</br className='mt-3'>");
+        // setresultData(newResponse2);
+        let newResponseArray = newResponse2.split(" ");
+        for (let i = 0; i < newResponseArray.length; i++) {
+            const nextWord = newResponseArray[i];
+            dealyPara(i,nextWord+" ")
+            
+        }
         setloading(false);
         setinput("");
     };
