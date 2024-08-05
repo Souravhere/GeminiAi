@@ -5,7 +5,7 @@ import { BiImageAdd } from "react-icons/bi";
 
 const Main = () => {
   return (
-    <div className='sm:mx-20 mx-8 w-full overflow-x-hidden text-gray-400'>
+    <div className='sm:mx-20 relative mx-8 w-full overflow-x-hidden text-gray-400'>
       <div className='w-full flex items-center justify-between mt-3'>
         <p className='text-xl'>Gemini</p>
         <FaRegUser size={"1.4em"}  />
@@ -33,19 +33,24 @@ const Main = () => {
         </div>
       </div>
       {/* main input */}
-      <div>
-        <div className='flex items-center gap-2'>
+      <div className='absolute w-full bottom-0 left-0'>
+        <div className='flex items-center gap-2 border border-blue-300 sm:w-[70%] w-full mx-auto p-2 rounded-full'>
           <input
           type="text" 
           name="" 
           id="" 
           placeholder='Message Gemini'
-          className=''
+          className='bg-transparent w-[80%] px-4'
           />
-          <BiImageAdd size={"1.5em"} />
-          <CiMicrophoneOn size={"1.5em"}  />
-          <CiLocationArrow1 size={"1.5em"} />
+          <abbr title="This feature is Unavailable">
+          <BiImageAdd size={"1.5em"} className='cursor-pointer' />
+          </abbr>
+          <abbr title="This feature is Unavailable">
+          <CiMicrophoneOn size={"1.5em"} className='cursor-pointer' />
+          </abbr>
+          <CiLocationArrow1 size={"2em"} />
         </div>
+        <p className='text-center my-2 text-gray-500 text-xs'>Gemini can make mistakes. Check important info.</p>
       </div>
     </div>
   )
