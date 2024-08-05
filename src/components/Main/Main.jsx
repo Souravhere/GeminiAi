@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaRegUser, FaCode, FaRegLightbulb } from "react-icons/fa";
 import { CiLocationOn, CiChat2,  CiMicrophoneOn, CiLocationArrow1 } from "react-icons/ci";
 import { BiImageAdd } from "react-icons/bi";
+import { Context } from '../../Context/Context';
 
 const Main = () => {
+  const {onSent, input, recentPrompt, showResult, loading,  setinput, resultData} = useContext(Context)
   return (
     <div className='sm:mx-20 relative mx-8 w-full overflow-x-hidden text-gray-400'>
       <div className='w-full flex items-center justify-between mt-3'>
@@ -41,6 +43,8 @@ const Main = () => {
           id="" 
           placeholder='Message Gemini'
           className='bg-transparent w-[80%] px-4 outline-none'
+          onChange={(e)=>setinput(e.target.value)}
+          value={input}
           />
           <abbr title="This feature is Unavailable">
           <BiImageAdd size={"1.5em"} className='cursor-pointer' />
@@ -48,7 +52,12 @@ const Main = () => {
           <abbr title="This feature is Unavailable">
           <CiMicrophoneOn size={"1.5em"} className='cursor-pointer' />
           </abbr>
-          <CiLocationArrow1 size={"2em"} />
+          <abbr title="Click to run the Prompt">
+          <CiLocationArrow1 size={"2em"} 
+          onClick={()=>onSent()}
+          className='hover:bg-slate-800 duration-300 p-1 rounded-full cursor-pointer'
+          />
+          </abbr>
         </div>
         <p className='text-center my-2 text-gray-500 text-xs'>Gemini can make mistakes. Check important info.</p>
       </div>

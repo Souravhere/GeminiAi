@@ -8,13 +8,14 @@
  */
 
 const GEMINI_API_KEY = "AIzaSyAd9pYcc6KEXw-IXD0PeLwkvK7NWbqFUio"
-const {
+import {
     GoogleGenerativeAI,
     HarmCategory,
     HarmBlockThreshold,
-  } = require("@google/generative-ai");
+  } from"@google/generative-ai"
   
-  const apiKey = process.env.GEMINI_API_KEY;
+//   const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = "AIzaSyAd9pYcc6KEXw-IXD0PeLwkvK7NWbqFUio";
   const genAI = new GoogleGenerativeAI(apiKey);
   
   const model = genAI.getGenerativeModel({
