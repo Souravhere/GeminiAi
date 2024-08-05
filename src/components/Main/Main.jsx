@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaRegUser, FaCode, FaRegLightbulb } from "react-icons/fa";
-import { CiLocationOn, CiChat2 } from "react-icons/ci";
+import { CiLocationOn, CiChat2,  CiMicrophoneOn, CiLocationArrow1 } from "react-icons/ci";
+import { BiImageAdd } from "react-icons/bi";
 
 const Main = () => {
   return (
@@ -29,6 +30,21 @@ const Main = () => {
         <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
           <p className='text-xs'>Describe the benefits of using AI in everyday life.</p>
           <CiChat2 size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]'/>
+        </div>
+      </div>
+      {/* main input */}
+      <div>
+        <div className='flex items-center gap-2'>
+          <input
+          type="text" 
+          name="" 
+          id="" 
+          placeholder='Message Gemini'
+          className=''
+          />
+          <BiImageAdd size={"1.5em"} />
+          <CiMicrophoneOn size={"1.5em"}  />
+          <CiLocationArrow1 size={"1.5em"} />
         </div>
       </div>
     </div>
