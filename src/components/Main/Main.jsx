@@ -15,7 +15,7 @@ const Main = () => {
   };
 
   return (
-    <div className='sm:mx-20 relative mx-8 w-full overflow-x-hidden text-gray-400'>
+    <div className='sm:mx-20 relative mx-8 w-full text-gray-400'>
       <div className='w-full flex items-center justify-between mt-3'>
         <p className='text-xl'>Gemini</p>
         <FaRegUser size={"1.4em"} />
@@ -28,20 +28,20 @@ const Main = () => {
         <h3 className='text-xl'>How can I help you Today?</h3>
       </div>
       <div className='w-full flex items-center justify-between mt-6 flex-wrap gap-3 sm:overflow-x-hidden overflow-x-scroll'>
-        <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
-          <p className='text-xs'>Please provide a brief summary on the concept of urban society</p>
+        <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
+          <p className='text-sm font-semibold'>Please provide a brief summary on the concept of urban society</p>
           <FaRegLightbulb size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
         </div>
-        <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
-          <p className='text-xs'>How do you implement a binary search algorithm in Python?</p>
+        <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
+          <p className='text-sm font-semibold'>How do you implement a binary search algorithm in Python?</p>
           <FaCode size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
         </div>
-        <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
-          <p className='text-xs'>Suggest beautiful destinations for my upcoming road trip</p>
+        <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
+          <p className='text-sm font-semibold'>Suggest beautiful destinations for my upcoming road trip</p>
           <CiLocationOn size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
         </div>
-        <div className='w-48 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
-          <p className='text-xs'>Describe the benefits of using AI in everyday life.</p>
+        <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer'>
+          <p className='text-sm font-semibold'>Describe the benefits of using AI in everyday life.</p>
           <CiChat2 size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
         </div>
       </div>
