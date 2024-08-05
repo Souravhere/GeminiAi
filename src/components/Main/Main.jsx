@@ -40,7 +40,7 @@ const Main = () => {
           name="" 
           id="" 
           placeholder='Message Gemini'
-          className='bg-transparent w-[80%] px-4'
+          className='bg-transparent w-[80%] px-4 outline-none'
           />
           <abbr title="This feature is Unavailable">
           <BiImageAdd size={"1.5em"} className='cursor-pointer' />
@@ -55,5 +55,6 @@ const Main = () => {
     </div>
   )
 }
+// AIzaSyAd9pYcc6KEXw-IXD0PeLwkvK7NWbqFUio
 
 export default Main
