@@ -3,6 +3,7 @@ import { FaRegUser, FaCode, FaRegLightbulb } from "react-icons/fa";
 import { CiLocationOn, CiChat2, CiMicrophoneOn, CiLocationArrow1 } from "react-icons/ci";
 import { BiImageAdd } from "react-icons/bi";
 import { Context } from '../../Context/Context';
+import { SiGooglegemini } from "react-icons/si";
 
 const Main = () => {
   const { onSent, input, recentPrompt, showResult, loading, setinput, resultData } = useContext(Context);
@@ -19,6 +20,9 @@ const Main = () => {
         <p className='text-xl'>Gemini</p>
         <FaRegUser size={"1.4em"} />
       </div>
+
+        {!showResult ? 
+        <>
       <div className='mt-20 '>
         <h1 className='text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-600'>Hello Dev,</h1>
         <h3 className='text-xl'>How can I help you Today?</h3>
@@ -41,8 +45,22 @@ const Main = () => {
           <CiChat2 size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
         </div>
       </div>
+        </> :
+        <div className='p-2'>
+          {/* this div for show the prompt and user icon */}
+          <div  className='flex items-center justify-between mt-6'>
+          <FaRegUser size={"2em"} className='bg-transparent text-clip p-2 rounded-full' />
+            <p className='bg-gray-700 p-1 rounded-full px-2'>{recentPrompt}</p>
+          </div>
+          {/* this div for show the result by gemini api */}
+          <div className='outputscroll flex items-start gap-2 overflow-y-scroll mb-28'>
+            <SiGooglegemini size={"2em"} className='bg-gray-700 p-2 rounded-full mt-2' />
+            <p dangerouslySetInnerHTML={{__html:resultData}} className='mt-3'></p>
+          </div>
+        </div>
+      }
       {/* main input */}
-      <div className='absolute w-full bottom-0 left-0'>
+      <div className='fixed w-full bottom-0 left-0 bg-black p-3'>
         <div className='flex items-center gap-2 border border-blue-300 sm:w-[70%] w-full mx-auto p-2 rounded-full'>
           <input
             type="text"
