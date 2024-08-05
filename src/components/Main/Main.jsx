@@ -49,13 +49,23 @@ const Main = () => {
         <div className='p-2'>
           {/* this div for show the prompt and user icon */}
           <div  className='flex items-center justify-between mt-6'>
-          <FaRegUser size={"2em"} className='bg-transparent text-clip p-2 rounded-full' />
+          <FaRegUser size={"1.3em"} />
             <p className='bg-gray-700 p-1 rounded-full px-2'>{recentPrompt}</p>
           </div>
           {/* this div for show the result by gemini api */}
-          <div className='outputscroll flex items-start gap-2 overflow-y-scroll mb-28'>
-            <SiGooglegemini size={"2em"} className='bg-gray-700 p-2 rounded-full mt-2' />
+          <div className='outputscroll flex items-start gap-3 overflow-y-scroll mb-28 bg-black'>
+            {/* <SiGooglegemini size={"2em"}  /> */}
+            <img className='w-6 h-6 mt-3' src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png" alt="Gemini logo" />
+            {loading ? 
+            <div class="w-full bg-transparent rounded-lg shadow-md p-4 animate-pulse">
+            <div class="w-2/3 h-4 bg-gray-800 rounded mb-2"></div>
+            <div class="w-full h-8 bg-gray-800 rounded mb-2"></div>
+            <div class="w-full h-8 bg-gray-800 rounded mb-2"></div>
+            <div class="w-1/2 h-8 bg-gray-800 rounded"></div>
+          </div>
+            :
             <p dangerouslySetInnerHTML={{__html:resultData}} className='mt-3'></p>
+            }
           </div>
         </div>
       }
