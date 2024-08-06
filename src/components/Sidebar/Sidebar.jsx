@@ -9,22 +9,22 @@ const Sidebar = () => {
   const [extended, setextended] = useState(false)
 
   return (
-    <div className='fixed top-0 left-0 bg-slate-800/90 h-screen min-w-16 max-w-fit'>
+    <div className='fixed top-0 left-0 bg-slate-800/90 h-screen z-40 min-w-16 max-w-fit'>
       {/* Menu button */}
       <div onClick={()=> setextended(prev => !prev)}>
         {extended ?
         <>
       <div>
-        <IoMdClose size={"2em"} className='bg-slate-500 fixed top-3 left-3 z-50 p-2 rounded-full mx-auto mt-3 hover:cursor-pointer'/>
+        <IoMdClose size={"2em"} className='bg-slate-500 fixed top-3 left-4 z-50 p-2 rounded-full mx-auto mt-3 hover:cursor-pointer'/>
       </div>
       
         </>
         :
-        <RiMenu2Fill  size={"2em"} className='bg-slate-500 fixed top-3 left-3 z-50 p-2 rounded-full mx-auto mt-3 hover:cursor-pointer'/>
+        <RiMenu2Fill  size={"2em"} className='bg-slate-500 fixed top-3 left-4 z-50 p-2 rounded-full mx-auto mt-3 hover:cursor-pointer'/>
         }
       
       {/* new chat */}
-        <div className='flex items-center justify-evenly mt-3 hover:bg-slate-500 duration-500'>
+        <div className='flex items-center justify-evenly hover:bg-slate-500 duration-500 mt-16'>
         <CiCirclePlus size={"2.5em"} />
         {extended ? <p>New Chat</p> : null}
         </div>
