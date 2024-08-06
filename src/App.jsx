@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className="flex bg-black text-white w-full min-h-screen max-h-fit relative">
-      {/* <Sidebar /> */}
+      <Sidebar />
       <Main />
       </div>
     </>
