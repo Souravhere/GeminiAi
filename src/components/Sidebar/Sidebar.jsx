@@ -20,13 +20,13 @@ const Sidebar = () => {
             <div className='absolute sm:w-1/4 w-1/2 h-screen bg-slate-800 top-0 left-0 p-3 z-40'>
               <div>
                 {/* new chat */}
-                <div className='flex items-center justify-evenly hover:bg-slate-500 duration-500 mt-16'>
+                <div className='flex items-center justify-evenly bg-slate-700 p-1 rounded-full hover:bg-slate-500 duration-500 mt-16  hover:cursor-pointer'>
                   <CiCirclePlus size={"2.5em"} />
                   {extended && <p>New Chat</p>}
                 </div>
                 {extended && (
-                  <div className='block items-center justify-evenly rounded-full mx-2 mt-2 hover:cursor-pointer'>
-                    <div className='flex items-center justify-evenly mt-2 bg-slate-700 rounded-lg p-[2px] gap-1'>
+                  <div className='block mt-2 hover:cursor-pointer'>
+                    <div className='flex items-center justify-evenly bg-slate-700 p-2 rounded-full hover:bg-slate-500 duration-500'>
                       <CiChat1 size={"2em"} />
                       <p>What is react....</p>
                     </div>
@@ -34,16 +34,16 @@ const Sidebar = () => {
                 )}
               </div>
               {/* BOTTOM div */}
-              <div>
-                <div className='flex items-center justify-evenly mt-2 rounded-lg p-[2px] gap-1 hover:cursor-pointer hover:bg-slate-500 duration-500'>
+              <div className='bottom-0 w-full mt-[90%]'>
+                <div className='flex items-center justify-evenly bg-slate-700 p-1 rounded-full hover:bg-slate-500 duration-500 mx-auto hover:cursor-not-allowed'>
                   <CiSettings size={"2em"} />
                   {extended && <p>Setting</p>}
                 </div>
-                <div className='flex items-center justify-evenly mt-2 rounded-lg p-[2px] gap-1 hover:cursor-pointer hover:bg-slate-500 duration-500'>
+                <div className='flex items-center justify-evenly bg-slate-700 p-1 rounded-full hover:bg-slate-500 duration-500 mt-2 hover:cursor-not-allowed'>
                   <VscAccount size={"1.6em"} />
                   {extended && <p>Account</p>}
                 </div>
-                <div className='flex items-center justify-evenly mt-2 rounded-lg p-[2px] gap-1 hover:cursor-pointer hover:bg-slate-500 duration-500'>
+                <div className='flex items-center justify-evenly bg-slate-700 p-1 rounded-full hover:bg-slate-500 duration-500 mt-2 hover:cursor-not-allowed'>
                   <CiCircleInfo size={"2em"} />
                   {extended && <p>About</p>}
                 </div>
