@@ -13,7 +13,11 @@ const Sidebar = () => {
       {/* TOP div */}
       <div>
       <div onClick={()=> setextended(prev => !prev)}>
-        {extended ? <IoMdClose size={"2em"} className='bg-slate-500 p-2 rounded-full mx-auto mt-3 hover:cursor-pointer'/> : <RiMenu2Fill  size={"2em"} className='bg-slate-500 p-2 rounded-full mx-auto mt-3 hover:cursor-pointer'/>}
+        {extended ?
+        <IoMdClose size={"2em"} className='bg-slate-500 fixed top-3 left-3 p-2 rounded-full mx-auto mt-3 hover:cursor-pointer'/>
+        :
+        <RiMenu2Fill  size={"2em"} className='bg-slate-500 fixed top-3 left-3 p-2 rounded-full mx-auto mt-3 hover:cursor-pointer'/>
+        }
       
       </div>
       {/* new chat */}
