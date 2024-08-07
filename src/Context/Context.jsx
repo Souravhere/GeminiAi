@@ -22,6 +22,7 @@ const ContextProvider = (props) => {
         setloading(true);
         setshowResult(true); 
         setrecentPrompt(input);
+        setprevPrompts(prev => [...prev,input])
         const response = await run(input);
         let responseArray = response.split("**");
         let  newResponse;
