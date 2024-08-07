@@ -29,9 +29,9 @@ const Sidebar = () => {
                     <h2>Recent</h2>
                     {prevPrompts && prevPrompts.map((item, index) => {
                       return (
-                        <div key={index} className='flex items-center justify-evenly bg-slate-700 p-2 rounded-full hover:bg-slate-500 duration-500'>
+                        <div key={index} className='flex items-center justify-evenly bg-slate-700 p-2 rounded-full hover:bg-slate-500 duration-500 my-2'>
                           <CiChat1 size={"2em"} />
-                          <p>{item}...</p>
+                          <p>{item.slice(0,15)}...</p>
                         </div>
                       );
                     })}
@@ -39,7 +39,7 @@ const Sidebar = () => {
                 )}
               </div>
               {/* BOTTOM div */}
-              <div className='bottom-0 w-full mt-[90%]'>
+              <div className='bottom-0 w-full mt-[85%]'>
                 <div className='flex items-center justify-evenly bg-slate-700 p-1 rounded-full hover:bg-slate-500 duration-500 mx-auto hover:cursor-not-allowed'>
                   <CiSettings size={"2em"} />
                   {extended && <p>Setting</p>}
