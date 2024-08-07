@@ -21,54 +21,55 @@ const Main = () => {
         <FaRegUser size={"1.4em"} className='mr-6' />
       </div>
 
-        {!showResult ? 
+      {!showResult ? (
         <>
-      <div className='mt-20 '>
-        <h1 className='text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-600'>Hello Dev,</h1>
-        <h3 className='text-xl'>How can I help you Today?</h3>
-      </div>
-      <div className='w-full flex items-center justify-between mt-6 flex-wrap gap-3 sm:overflow-x-hidden overflow-x-scroll'>
-        <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer sm:mx-0 mx-auto'>
-          <p className='text-sm font-semibold'>Please provide a brief summary on the concept of urban society</p>
-          <FaRegLightbulb size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
-        </div>
-        <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer sm:mx-0 mx-auto'>
-          <p className='text-sm font-semibold'>How do you implement a binary search algorithm in Python?</p>
-          <FaCode size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
-        </div>
-        <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer sm:mx-0 mx-auto'>
-          <p className='text-sm font-semibold'>Suggest beautiful destinations for my upcoming road trip</p>
-          <CiLocationOn size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
-        </div>
-        <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer sm:mx-0 mx-auto'>
-          <p className='text-sm font-semibold'>Describe the benefits of using AI in everyday life.</p>
-          <CiChat2 size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
-        </div>
-      </div>
-        </> :
+          <div className='mt-20 '>
+            <h1 className='text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-600'>Hello Dev,</h1>
+            <h3 className='text-xl'>How can I help you Today?</h3>
+          </div>
+          <div className='w-full flex items-center justify-between mt-6 flex-wrap gap-3 sm:overflow-x-hidden overflow-x-scroll'>
+            <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer sm:mx-0 mx-auto'>
+              <p className='text-sm font-semibold'>Please provide a brief summary on the concept of urban society</p>
+              <FaRegLightbulb size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
+            </div>
+            <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer sm:mx-0 mx-auto'>
+              <p className='text-sm font-semibold'>How do you implement a binary search algorithm in Python?</p>
+              <FaCode size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
+            </div>
+            <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer sm:mx-0 mx-auto'>
+              <p className='text-sm font-semibold'>Suggest beautiful destinations for my upcoming road trip</p>
+              <CiLocationOn size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
+            </div>
+            <div className='sm:w-48 w-80 bg-gray-800 p-2 rounded-lg shrink-0 hover:bg-gray-900 duration-300 cursor-pointer sm:mx-0 mx-auto'>
+              <p className='text-sm font-semibold'>Describe the benefits of using AI in everyday life.</p>
+              <CiChat2 size={"1.5em"} className='bg-gray-700 p-1 rounded-full mt-2 ml-[85%]' />
+            </div>
+          </div>
+        </>
+      ) : (
         <div className='p-2'>
           {/* this div for show the prompt and user icon */}
-          <div  className='flex items-center justify-between mt-6'>
-          <FaRegUser size={"1.3em"} />
+          <div className='flex items-center justify-between mt-6'>
+            <FaRegUser size={"1.3em"} />
             <p className='bg-gray-700 p-1 rounded-full px-2'>{recentPrompt}</p>
           </div>
           {/* this div for show the result by gemini api */}
           <div className='outputscroll flex items-start gap-3 overflow-y-scroll mb-28 bg-black'>
             {/* <SiGooglegemini size={"2em"}  /> */}
             <img className='w-6 h-6 mt-3' src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png" alt="Gemini logo" />
-            {loading ? 
-            <div class="w-full bg-transparent rounded-lg shadow-md p-4 animate-pulse">
-            <div class="w-2/3 h-4 bg-gray-800 rounded mb-2"></div>
-            <div class="w-full h-8 bg-gray-800 rounded mb-2"></div>
-            <div class="w-full h-8 bg-gray-800 rounded mb-2"></div>
-            <div class="w-1/2 h-8 bg-gray-800 rounded"></div>
-          </div>
-            :
-            <p dangerouslySetInnerHTML={{__html:resultData}} className='mt-3'></p>
-            }
+            {loading ? (
+              <div className="w-full bg-transparent rounded-lg shadow-md p-4 animate-pulse">
+                <div className="w-2/3 h-4 bg-gray-800 rounded mb-2"></div>
+                <div className="w-full h-8 bg-gray-800 rounded mb-2"></div>
+                <div className="w-full h-8 bg-gray-800 rounded mb-2"></div>
+                <div className="w-1/2 h-8 bg-gray-800 rounded"></div>
+              </div>
+            ) : (
+              <p dangerouslySetInnerHTML={{ __html: resultData }} className='mt-3'></p>
+            )}
           </div>
         </div>
-      }
+      )}
       {/* main input */}
       <div className='fixed w-full bottom-0 left-0 bg-black p-3'>
         <div className='flex items-center gap-2 border border-blue-300 sm:w-[70%] w-full mx-auto p-2 rounded-full'>

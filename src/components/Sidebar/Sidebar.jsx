@@ -6,12 +6,17 @@ import { IoMdClose } from "react-icons/io";
 import { Context } from '../../Context/Context';
 
 const Sidebar = () => {
-  const [extended, setextended] = useState(false);
-  const { onSent, prevPrompts, setrecentPrompt } = useContext(Context);
+  const [extended, setExtended] = useState(false);
+  const { onSent, prevPrompts, setRecentPrompt } = useContext(Context);
+
+  const loadPrompt = async (prompt) => {
+    setRecentPrompt(prompt);
+    await onSent(prompt);
+  };
 
   return (
     <div className=''>
-      <div onClick={() => setextended(prev => !prev)}>
+      <div onClick={() => setExtended(prev => !prev)}>
         {extended ? (
           <>
             <div>
@@ -26,17 +31,15 @@ const Sidebar = () => {
                 </div>
                 {extended && (
                   <>
-                  <h2 className='pl-2 font-semibold mt-1'>Recent</h2>
-                  <div className='block mt-2 hover:cursor-pointer h-72 overflow-y-scroll'>
-                    {prevPrompts && prevPrompts.map((item, index) => {
-                      return (
-                        <div key={index} className='flex items-center justify-evenly bg-slate-800 p-2 rounded-full hover:bg-slate-700 duration-500 my-2'>
+                    <h2 className='pl-2 font-semibold mt-1'>Recent</h2>
+                    <div className='block mt-2 hover:cursor-pointer h-72 overflow-y-scroll'>
+                      {prevPrompts && prevPrompts.map((item, index) => (
+                        <div key={index} onClick={() => loadPrompt(item)} className='flex items-center justify-evenly bg-slate-800 p-2 rounded-full hover:bg-slate-700 duration-500 my-2'>
                           <CiChat1 size={"2em"} />
-                          <p>{item.slice(0,15)}...</p>
+                          <p>{item.slice(0, 15)}...</p>
                         </div>
-                      );
-                    })}
-                  </div>
+                      ))}
+                    </div>
                   </>
                 )}
               </div>
@@ -63,6 +66,6 @@ const Sidebar = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Sidebar;
