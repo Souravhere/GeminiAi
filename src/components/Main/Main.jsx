@@ -16,9 +16,9 @@ const Main = () => {
 
   return (
     <div className='sm:mx-20 relative mx-8 w-full text-gray-400 mt-3'>
-      <div className='w-full flex items-center justify-between mt-3'>
-        <p className='text-xl sm:pl-0 pl-6'>Gemini</p>
-        <FaRegUser size={"1.4em"} />
+      <div className='w-full fixed top-0 left-0 flex items-center justify-between mt-3 p-3'>
+        <p className='text-xl sm:pl-0 ml-12 font-semibold'>Gemini</p>
+        <FaRegUser size={"1.4em"} className='mr-6' />
       </div>
 
         {!showResult ? 
