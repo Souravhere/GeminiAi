@@ -1,33 +1,18 @@
-Gemini AI Clone Project
-Overview
-This project aims to create a clone of the Gemini AI chatbot using the Google Gemini API. The application will allow users to input questions, display recent questions in a sidebar, and utilize various libraries to enhance the UI and UX.
-Features
-Chat Question Input
-Users can input questions, which will be sent to the Google Gemini API for processing.
-Recent Questions Sidebar
-Recent questions will be saved and displayed in a sidebar for easy access.
-UI/UX Enhancements
-React Icons: Utilize React Icons to add visually appealing icons throughout the application.
-Tooltip: Implement tooltips to provide additional information and context to users.
-Technical Requirements
-Frontend: Built using React (Vite.js with JavaScript)
-API Integration: Google Gemini API
-Libraries:
-React Icons
-Tooltip
-Project Structure
-MarkDown
-src/
-components/
-containers/
-api/
-styles/
-public/
-index.html
-Getting Started
-Clone the repository
-Install dependencies using npm install or yarn install
-Start the development server using npm run dev or yarn dev
-Contributing
-Contributions are welcome! Please submit a pull request with a clear description of your changes.
-Let me know if you need any further changes!
+# Gemini Ai
+
+Welcome to **Gemini Ai**, a React-based clone of Google's Gemini AI, leveraging the Gemini API to offer users an interactive and dynamic AI experience. This project aims to replicate and enhance the functionalities of the original Gemini AI, providing an accessible platform for users to explore and engage with advanced AI capabilities.
+
+## Features
+
+- **Interactive AI Interface:** Engage with a responsive and intuitive user interface designed for seamless interaction with Gemini AI.
+- **Real-Time Updates:** Continuous improvements and feature additions ensure that the application remains up-to-date and relevant to the latest advancements.
+- **Customizable Experience:** Users can tailor their interaction with Gemini AI according to their preferences and needs.
+- **Scalable Architecture:** Built with React for a robust and scalable application, ensuring smooth performance even as new features are introduced.
+
+## Roadmap
+
+- **Integration of Additional APIs:** To expand the capabilities of Gemini Ai and enhance user experience.
+- **User Feedback Implementation:** Collecting and implementing user feedback to refine and optimize the application.
+- **Feature Expansion:** Regular updates to introduce new functionalities and improve existing ones.
+
+## Getting Started

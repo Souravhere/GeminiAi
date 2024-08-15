@@ -97,6 +97,7 @@ const Main = () => {
         <p className='text-center my-2 text-gray-500 text-xs'>Gemini can make mistakes. Check important info.</p>
       </div>
     </div>
+    
   );
 }
 
